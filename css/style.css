@@ -151,6 +151,16 @@ p {
     vertical-align: middle;
 }
 
+#resultTable th:first-child,
+#resultTable td:first-child {
+    width: 150px;
+}
+
+#resultTable th:last-child,
+#resultTable td:last-child {
+    width: auto;
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
   body {
