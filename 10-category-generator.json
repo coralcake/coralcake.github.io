@@ -1,0 +1,82 @@
+{
+  "theme": [
+    "city",
+    "character",
+    "animal",
+    "machine",
+    "temple",
+    "garden",
+    "vehicle",
+    "island"
+  ],
+  "location": [
+    "in space",
+    "underwater",
+    "in ruins",
+    "in the jungle",
+    "in the desert",
+    "in the clouds",
+    "underground"
+  ],
+  "era_or_mood": [
+    "ancient",
+    "medieval",
+    "modern",
+    "retro futuristic",
+    "cyberpunk",
+    "post-apocalyptic"
+  ],
+  "emotion": [
+    "nostalgia",
+    "tension",
+    "calm",
+    "melancholy",
+    "awe",
+    "loneliness"
+  ],
+  "color_palette": [
+    "monochromatic",
+    "pastel",
+    "neon",
+    "black and gold",
+    "cool (blue)",
+    "warm (orange)"
+  ],
+  "perspective": [
+    "bird's-eye view",
+    "macro (very close)",
+    "ground level",
+    "through glass",
+    "from behind the character",
+    "from inside an object"
+  ],
+  "motion_element": [
+    "something is falling",
+    "something is flowing",
+    "something is spinning",
+    "something is breaking apart",
+    "something is growing"
+  ],
+  "weirdness_element": [
+    "gravity does not work",
+    "something is gigantic",
+    "something is miniature",
+    "something is alive",
+    "something is upside down"
+  ],
+  "symbol_or_motif": [
+    "mirrors",
+    "doors",
+    "water",
+    "plants",
+    "fire",
+    "clocks"
+  ],
+  "creative_constraint": [
+    "only 2 colors",
+    "only lines",
+    "only geometric shapes",
+    "no black",
+    "max 15 minutes of work"
+  ]
+}
