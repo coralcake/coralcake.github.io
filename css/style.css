@@ -143,6 +143,7 @@ p {
     gap: 1rem;
     transition: left 0.3s ease;
     z-index: 1000;
+    overflow-y: auto;
   }
 
   nav .menu-items.open {
