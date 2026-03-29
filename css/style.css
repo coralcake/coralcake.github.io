@@ -22,10 +22,24 @@ nav {
   gap: 25px;
 }
 
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  color: #889eaa;
+  border: none;
+  cursor: pointer;
+}
+
+nav .menu-items {
+  gap: 2rem;
+}
+
 .menu-section {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 30px;
 }
 
 .menu-title {
@@ -61,7 +75,7 @@ nav a:hover {
 /* CONTENT */
 main {
   flex: 1;
-  max-width: 800px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 40px;
 }
@@ -96,9 +110,13 @@ p {
 }
 
 /* MOBILE */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   body {
     flex-direction: column;
+  }
+  
+  .menu-toggle {
+    display: block;
   }
 
   nav {
@@ -110,5 +128,43 @@ p {
 
   .menu-section {
     min-width: max-content;
+  }
+  
+  nav .menu-items {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #212121;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+    flex-direction: column;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  nav .menu-items.open {
+    left: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    display: none;
+  }
+
+  .overlay.active {
+    display: block;
+  }
+
+  body.menu-open {
+    overflow: hidden;
   }
 }
