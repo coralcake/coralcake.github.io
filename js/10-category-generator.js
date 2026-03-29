@@ -54,4 +54,7 @@ async function generateRandomTopic() {
 }
 
 // Event listener
-document.getElementById('generateButton').addEventListener('click', generateRandomTopic);
+/*document.getElementById('generateButton').addEventListener('click', generateRandomTopic);*/
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('generateButton').addEventListener('click', generateRandomTopic);
+});
