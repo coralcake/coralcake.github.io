@@ -7,25 +7,33 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <nav>
     <div class="menu-logo">
-      <img src="https://avatars.githubusercontent.com/u/158809115" alt="Logo" />
+      <a href="https://coralcake.github.io">
+        <img src="https://avatars.githubusercontent.com/u/158809115" alt="Logo" />
+      </a>
     </div>
-    <div class="menu-section">
-      <div class="menu-title">Check out my GitHub</div>
-      <a href="https://github.com/coralcake">github.com/coralcake</a>
-    </div>
-    <div class="menu-section">
-      <div class="menu-title">Drawing idea generators</div>
-      <a href="#generator-8">8-category generator</a>
-      <a href="#generator-10">10-category generator</a>
-      <a href="#generator-textures">Texture generator</a>
-    </div>
-    <div class="menu-section">
-      <div class="menu-title">Art database</div>
-      <a href="pages/art-database.html#art-traditional">Traditional artworks</a>
-      <a href="pages/art-database.html#art-digital">Digital artworks</a>
+    
+    <button class="menu-toggle" aria-label="Open menu">
+      &#9776;
+    </button>
+    
+    <div class="menu-items">
+      <div class="menu-section">
+        <div class="menu-title">Check out my GitHub</div>
+        <a href="https://github.com/coralcake">github.com/coralcake</a>
+      </div>
+      <div class="menu-section">
+        <div class="menu-title">Drawing idea generators</div>
+        <a href="#generator-8">8-category generator</a>
+        <a href="#generator-10">10-category generator</a>
+        <a href="#generator-textures">Texture generator</a>
+      </div>
+      <div class="menu-section">
+        <div class="menu-title">Art database</div>
+        <a href="pages/art-database.html#art-traditional">Traditional artworks</a>
+        <a href="pages/art-database.html#art-digital">Digital artworks</a>
+      </div>
     </div>
   </nav>
 
@@ -53,6 +61,9 @@
       </div>
     </section>
   </main>
-
+  
+  <div class="overlay"></div>
+  
+  <script src="js/script.js"></script>
 </body>
 </html>
