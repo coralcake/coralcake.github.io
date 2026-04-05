@@ -1,62 +1,93 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Art Database</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art database</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <nav>
-    <div class="menu-logo">
-      <a href="https://coralcake.github.io">
-        <img src="https://avatars.githubusercontent.com/u/158809115" alt="Logo" />
-      </a>
-    </div>
+    <header>
+        <div class="menu-left">
+            <div class="hamburger" onclick="showMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="switch-lang">
+                <img src="/svg/flag-uk.svg" alt="English" class="flag-icon" id="flag1">
+                <img src="/svg/flag-pl.svg" alt="Polish" class="flag-icon darkened" id="flag2">
+            </div>
+        </div>
+        
+        <div class="logo-center">
+            <a href="https://coralcake.github.io">
+                <img src="/img/avatar-coralcake-300x300.png" alt="Logo">
+            </a>
+            <span class="logo-text">my playground</span>
+        </div>
+        
+        <div class="switch-right">
+            <img id="modeImage" src="/svg/mode-light.svg" width=20 alt="Light/Dark Mode">
+            <label class="switch-mode">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
     
-    <button class="menu-toggle" aria-label="Open menu">
-      &#9776;
-    </button>
+    <main>
+        <nav id="menu">
+            <div class="nav-wrapper">
+                <div class="nav-section">
+                    <div class="xmark-icon" onclick="hideMenu()">
+                        <img id="xmarkIcon" src="/svg/xmark-day.svg" alt="Close Menu">
+                    </div>
+                    <div class="nav-title">Follow me</div>
+                    <a href="https://github.com/coralcake" class="icon">
+                        <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub">
+                        on GitHub: @coralcake
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Drawing idea generators</div>
+                    <a href="/pages/generators.html#generator-8">8-category generator</a>
+                    <a href="/pages/generators.html#generator-10">10-category generator</a>
+                    <a href="/pages/generators.html#generator-textures">Texture generator</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Art database</div>
+                    <a href="#art-traditional">Traditional artworks</a>
+                    <a href="#art-digital">Digital artworks</a>
+                </div>
+            </div>
+        </nav>
+        
+        <section id="art-base">
+            <h1>Art database</h1>
+            
+            <div id="art-traditional">
+                <h2>Traditional artworks</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            
+            <hr class="section-separator" />
+            
+            <div id="art-digital">
+                <h2>Digital artworks</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+    </main>
     
-    <div class="menu-items">
-      <div class="menu-section">
-        <div class="menu-title">Check out my GitHub</div>
-        <a href="https://github.com/coralcake">github.com/coralcake</a>
-      </div>
-      <div class="menu-section">
-        <div class="menu-title">Drawing idea generators</div>
-        <a href="../index.html#generator-8">8-category generator</a>
-        <a href="../index.html#generator-10">10-category generator</a>
-        <a href="../index.html#generator-textures">Texture generator</a>
-      </div>
-      <div class="menu-section">
-        <div class="menu-title">Art database</div>
-        <a href="#art-traditional">Traditional artworks</a>
-        <a href="#art-digital">Digital artworks</a>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <section id="art-base">
-      <h1>Art database</h1>
-      
-      <div id="art-traditional">
-        <h2>Traditional artworks</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      
-      <hr class="section-separator" />
-      
-      <div id="art-digital">
-        <h2>Digital artworks</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-    </section>
-  </main>
-  
-  <div class="overlay"></div>
-  
-  <script src="../js/menu-mobile.js"></script>
+    <div id="overlay" onclick="hideMenu()"></div>
+    
+    <footer>
+        <span class="footer-text">© 2026 coralcake</span>
+    </footer>
+    
+    <script src="/js/menu-mobile.js"></script>
+    <script src="/js/dark-light-mode.js"></script>
+    <script src="/js/darkening-image.js"></script>
 </body>
 </html>
