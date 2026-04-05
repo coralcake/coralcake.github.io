@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing idea generators</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="menu-left">
+            <div class="hamburger" onclick="showMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="switch-lang">
+                <img src="/svg/flag-uk.svg" alt="English" class="flag-icon" id="flag1">
+                <img src="/svg/flag-pl.svg" alt="Polish" class="flag-icon darkened" id="flag2">
+            </div>
+        </div>
+        
+        <div class="logo-center">
+            <a href="https://coralcake.github.io">
+                <img src="/img/avatar-coralcake-300x300.png" alt="Logo">
+            </a>
+            <span class="logo-text">my playground</span>
+        </div>
+        
+        <div class="switch-right">
+            <img id="modeImage" src="/svg/mode-light.svg" width=20 alt="Light/Dark Mode">
+            <label class="switch-mode">
+                <input type="checkbox" id="modeToggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+    
+    <main>
+        <nav id="menu">
+            <div class="nav-wrapper">
+                <div class="nav-section">
+                    <div class="xmark-icon" onclick="hideMenu()">
+                        <img id="xmarkIcon" src="/svg/xmark-day.svg" alt="Close Menu">
+                    </div>
+                    <div class="nav-title">Follow me</div>
+                    <a href="https://github.com/coralcake" class="icon">
+                        <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub">
+                        on GitHub: @coralcake
+                    </a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Drawing idea generators</div>
+                    <a href="#generator-8">8-category generator</a>
+                    <a href="#generator-10">10-category generator</a>
+                    <a href="#generator-textures">Texture generator</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-title">Art database</div>
+                    <a href="/pages/art-database.html#art-traditional">Traditional artworks</a>
+                    <a href="/pages/art-database.html#art-digital">Digital artworks</a>
+                </div>
+            </div>
+        </nav>
+        
+        <section id="generators">
+            <h1>Drawing idea generators</h1>
+            
+            <div id="generator-8">
+                <h2>8-category generator</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+            
+            <hr class="section-separator" />
+            
+            <div id="generator-10">
+                <h2>10-category generator</h2>
+                <button id="generateButton">Generate</button>
+                <table id="resultTable" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+                <script src="/js/10-category-generator.js"></script>
+            </div>
+            
+            <hr class="section-separator" />
+            
+            <div id="generator-textures">
+                <h2>Texture generator</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+    </main>
+    
+    <div id="overlay" onclick="hideMenu()"></div>
+    
+    <footer>
+        <span class="footer-text">© 2026 coralcake</span>
+    </footer>
+    
+    <script src="/js/menu-mobile.js"></script>
+    <script src="/js/dark-light-mode.js"></script>
+    <script src="/js/darkening-image.js"></script>
+</body>
+</html>
