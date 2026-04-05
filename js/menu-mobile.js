@@ -1,19 +1,13 @@
-const toggleButton = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu-items');
+const menu = document.getElementById('menu');
+const overlay = document.getElementById('overlay');
 const body = document.body;
-const overlay = document.querySelector('.overlay');
 
-toggleButton.addEventListener('click', (e) => {
-  menu.classList.toggle('open');
-  overlay.classList.toggle('active');
-  body.classList.toggle('menu-open');
-  e.stopPropagation();
-});
+function showMenu() {
+    menu.classList.add('active');
+    overlay.classList.add('active');
+}
 
-document.addEventListener('click', (e) => {
-  if (!menu.contains(e.target) && !toggleButton.contains(e.target)) {
-    menu.classList.remove('open');
+function hideMenu() {
+    menu.classList.remove('active');
     overlay.classList.remove('active');
-    body.classList.remove('menu-open');
-  }
-});
+}
