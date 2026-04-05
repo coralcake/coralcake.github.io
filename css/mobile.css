@@ -1,0 +1,67 @@
+/* RESPONSYWNOŚĆ */
+/* content 800px + padding 2x20px + menu 220px = 1060px */
+@media (max-width: 1060px) {
+    .hamburger {
+        display: flex;
+    }
+    
+    .xmark-icon {
+        display: inline-flex;
+    }
+    
+    nav {
+        background-color: transparent;
+        bottom: 0; /* dzięki temu menu nie wychodzi poza ekran na dole */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        left: 0;
+        overflow-y: auto;
+        position: fixed; /* menu jest zawsze widoczne */
+        top: 0;
+        transform: translateX(-100%); /* ukryte po lewej stronie */
+        width: 220px;
+        z-index: 1200;
+    }
+    
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1; /* pozwala na rozciąganie menu w dół, wypełniając dostępną przestrzeń */
+        width: 100%;
+    }
+    
+    .nav-section {
+        margin-bottom: 40px;
+        margin-top: 0px;
+    }
+
+    nav.active {
+        transform: translateX(0); /* przesuwane przy aktywacji */
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    section {
+        margin: 20px auto;
+        width: 100%;
+    }
+
+    #overlay {
+        background-color: rgba(0,0,0,0.4);
+        display: none;
+        height: 100%;
+        left: 0;
+        position: fixed;
+        top: 0;
+        transition: opacity 0.3s;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    #overlay.active {
+        display: block;
+    }
+}

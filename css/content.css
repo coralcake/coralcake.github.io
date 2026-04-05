@@ -1,0 +1,119 @@
+/* CONTENT */
+main {
+    display: flex;
+    flex: 1;
+    min-width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+section {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px;
+    width: 800px;
+}
+
+h1 {
+    color: #333333;
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    margin-bottom: 40px;
+    transition: color 0.3s;
+}
+
+h2 {
+    color: #d56e55;
+    font-family: system-ui, sans-serif;
+    font-size: 18px;
+    margin-bottom: 12px;
+    margin-top: 20px;
+    transition: color 0.3s;
+}
+
+p {
+    color: #000000;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+a {
+    color: #763d2f;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #d56e55;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #333333;
+    text-decoration: underline;
+}
+
+.section-separator {
+    background-color: #cccccc;
+    border: 0;
+    height: 1px;
+    margin: 50px 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#generateButton {
+    background-color: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 18px / 18px;
+    color: #bd624c;
+    cursor: pointer;
+    font-size: 14px;
+    height: 36px;
+    margin: 20px 0;
+    padding: 8px 18px;
+    transition: all 0.3s ease;
+}
+
+/* przycisk podświetlony */
+#generateButton:hover {
+    background-color: #f9d7cf;
+    border-color: #f4af9f;
+    color: #763d2f;
+}
+
+/* przycisk kliknięty */
+#generateButton:active {
+    background-color: #f6bdaf;
+    color: #47241c;
+}
+
+#resultTable {
+    border-collapse: collapse;
+    color: #333333; /* kolor tekstu */
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    max-width: 768px;
+    width: 100%;
+    transition: color 0.3s;
+}
+
+#resultTable th,
+#resultTable td {
+    border: 1px solid #cccccc;
+    padding: 8px 12px;
+    text-align: left;
+    vertical-align: middle;
+    transition: border-color 0.3s, border 0.3s, color 0.3s;
+}
+
+#resultTable th:first-child,
+#resultTable td:first-child {
+    width: 150px;
+}
+
+#resultTable th:last-child,
+#resultTable td:last-child {
+    width: auto;
+}

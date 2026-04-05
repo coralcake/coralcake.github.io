@@ -1,0 +1,117 @@
+/* DARK MODE */
+body.dark-mode {
+    background-color: #303030;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #252525;
+    border-bottom: 1px solid #464646;
+    color: #e0e0e0;
+}
+
+body.dark-mode .flag-icon {
+    border: 1px solid #464646;
+}
+
+body.dark-mode .hamburger div {
+    background-color: #e0e0e0;
+}
+
+body.dark-mode .logo-text {
+    color: #e0e0e0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+body.dark-mode nav .nav-wrapper {
+    background-color: #2a2a2a;
+    border: 1px solid #464646;
+}
+
+body.dark-mode nav a {
+    color: #e0e0e0; /* nieco ciemniejszy biały */
+}
+
+body.dark-mode nav a:hover {
+    background-color: #333333;
+    color: #ed7b5f;
+}
+
+body.dark-mode h1 {
+    color: #999999;
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+}
+
+body.dark-mode h2 {
+    color: #ed7b5f;
+    font-family: system-ui, sans-serif;
+    font-size: 18px;
+}
+
+body.dark-mode p {
+    color: #e0e0e0;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+}
+
+body.dark-mode a {
+    color: #e0e0e0;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+body.dark-mode a:hover {
+    color: #ed7b5f;
+    text-decoration: underline;
+}
+
+body.dark-mode a:visited {
+    color: #999999;
+    text-decoration: underline;
+}
+
+body.dark-mode .section-separator {
+    background-color: #464646;
+    border: 0;
+    height: 1px;
+    margin: 50px 0;
+}
+
+body.dark-mode #generateButton {
+    background-color: #252525; /* ciemny szary */
+    border: 1px solid #464646; /* jasny szary */
+    color: #ffffff;            /* biały */
+}
+
+/* przycisk podświetlony */
+body.dark-mode #generateButton:hover {
+    background-color: #2b2b2b; /* jaśniejszy, ale ciemniejszy od tła */
+    border-color: #464646;     /* ten sam */
+    color: #ee886f;            /* kolorowy */
+}
+
+/* przycisk kliknięty */
+body.dark-mode #generateButton:active {
+    background-color: #282828; /* coś pomiędzy 21 a 2a */
+    color: #d56e55;            /* ciemniejszy kolorowy */
+}
+
+body.dark-mode #resultTable th,
+body.dark-mode #resultTable td {
+    border: 1px solid #464646;
+    color: #e0e0e0;
+}
+
+body.dark-mode footer {
+    background-color: #252525;
+    border-top: 1px solid #464646;
+    color: #e0e0e0;
+}
+
+body.dark-mode .footer-text {
+    color: #e0e0e0;
+    font-size: 15px;
+}

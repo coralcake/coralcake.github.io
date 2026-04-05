@@ -1,0 +1,133 @@
+/* HEADER */
+header {
+    background-color: #fafafa;
+    color: #333333;
+    border-bottom: 1px solid #cccccc;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between; /* rozrzuć elementy */
+    align-items: center; /* wyśrodkowanie w pionie */
+    font-size: 24px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* LANGUAGE TOGGLE */
+.switch-lang {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.flag-icon {
+    border: 1px solid #bbbbbb;
+    cursor: pointer;
+    height: 14px;
+    transition: border-color 0.3s, transform 0.3s ease, filter 0.3s ease;
+}
+
+.darkened {
+    filter: brightness(75%);
+    transform: scale(0.8);
+}
+
+/* HAMBURGER */
+.hamburger {
+    display: none;
+    flex-direction: column; /* trzy kreski w pionie */
+    gap: 5px; /* odstęp między kreskami */
+    z-index: 1100;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #555555;
+    transition: background-color 0.3s;
+}
+
+/* LOGO */
+.logo-center {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 0px;
+    gap: 10px;
+}
+
+.logo-center img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* robi koło */
+    object-fit: cover;  /* żeby obrazek się nie rozciągał */
+    vertical-align: middle; /* wyrównuje obrazek względem tekstu */
+}
+
+.logo-text {
+    font-family: system-ui, sans-serif;
+    font-size: 20px;
+    color: #333333;
+    transition: color 0.3s;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* h-shadow v-shadow blur-radius color */
+}
+
+/* LIGHT/DARK TOGGLE */
+.switch-right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.switch-mode {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch-mode input {
+    opacity: 0; /* ukrycie checkboxa */
+    width: 0;
+    height: 0;
+}
+
+/* suwak w lewo = light mode */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e0e0e0; /* szare tło suwaka */
+    transition: 0.3s;
+    border-radius: 20px; /* zaokrąglony prostokąt */
+}
+
+.slider:before {
+    position: absolute;
+    content: ""; /* to konieczne, aby był widoczny */
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    top: 2px;
+    background-color: #ffffff; /* białe kółko */
+    transition: 0.3s;
+    border-radius: 50%; /* robi koło */
+}
+
+/* suwak w prawo = dark mode */
+input:checked + .slider  {
+    background-color: #d56e55; /* kolorowe tło suwaka */
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px); /* przesunięcie kółka */
+    background-color: #e0e0e0; /* jasne kółko */
+}

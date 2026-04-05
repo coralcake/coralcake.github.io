@@ -1,0 +1,95 @@
+/* MENU */
+nav {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    position: relative; /* pozwala menu rozciągać się w dół */
+    transition: transform 0.3s ease;
+    width: 220px;
+    z-index: 1200;
+}
+
+/* zaokrąglony div wewnątrz nav */
+.nav-wrapper {
+    align-items: flex-start;
+    background-color: #fafafa;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* żeby padding nie wychodził poza */
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* pozwala na rozciąganie menu w dół, wypełniając dostępną przestrzeń */
+    overflow-y: auto; /* przewijanie menu, jeśli jego zawartość przekroczy wysokość ekranu */
+    padding: 5px;
+    position: relative; /* nie może być fixed */
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 100%;
+}
+
+.nav-section {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.nav-title {
+    color: #999999;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    text-transform: uppercase;
+}
+
+nav a {
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000000;
+    display: block;
+    font-size: 14px;
+    margin: 0;
+    padding: 6px 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+nav a:hover {
+    background-color: #f9d7cf;
+    color: #763d2f;
+}
+
+nav a:active {
+    background-color: #f9d7cf;
+    color: #763d2f;
+}
+
+.icon {
+    align-items: center;  /* Wyrównuje tekst i obrazek w pionie */
+    display: inline-flex; /* Pozwala na ustawienie elementów w linii */
+    gap: 6px;             /* Odstęp między ikoną a tekstem */
+    width: 100%;
+}
+
+.icon img {
+    border-radius: 50%; /* robi koło */
+    height: 20px;
+    object-fit: cover;  /* żeby obrazek się nie rozciągał */
+    vertical-align: middle; /* wyrównuje obrazek względem tekstu */
+    width: 20px;
+}
+
+/* Krzyżyk */
+.xmark-icon {
+    align-items: center;
+    display: none;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.xmark-icon img {
+    cursor: pointer;
+    height: 24px;
+    width: 24px;
+}
