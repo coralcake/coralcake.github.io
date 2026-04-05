@@ -36,7 +36,7 @@ p {
     font-size: 14px;
     transition: color 0.3s;
 }
-/*
+
 a {
     color: #763d2f;
     font-family: system-ui, sans-serif;
@@ -54,7 +54,7 @@ a:visited {
     color: #333333;
     text-decoration: underline;
 }
-*/
+
 .section-separator {
     background-color: #cccccc;
     border: 0;
