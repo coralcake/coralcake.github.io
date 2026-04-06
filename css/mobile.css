@@ -9,7 +9,7 @@
         display: inline-flex;
     }
     
-    nav {
+    nav#menu {
         background-color: transparent;
         bottom: 0; /* dzięki temu menu nie wychodzi poza ekran na dole */
         display: flex;
@@ -35,32 +35,27 @@
         margin-bottom: 40px;
         margin-top: 0px;
     }
-
-    nav.active {
-        transform: translateX(0); /* przesuwane przy aktywacji */
-    }
-
+    
     main {
         flex-direction: column;
     }
-
+    
     section {
         margin: 20px auto;
         width: 100%;
     }
-
+    
     #overlay {
-        background-color: rgba(0,0,0,0.4);
-        display: none;
-        height: 100%;
-        left: 0;
         position: fixed;
         top: 0;
-        transition: opacity 0.3s;
+        left: 0;
         width: 100%;
-        z-index: 1000;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        display: none;
     }
-
+    
     #overlay.active {
         display: block;
     }
