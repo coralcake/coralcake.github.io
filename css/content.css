@@ -36,8 +36,8 @@ p {
     font-size: 14px;
     transition: color 0.3s;
 }
-/*
-a {
+
+main a {
     color: #763d2f;
     font-family: system-ui, sans-serif;
     font-size: 14px;
@@ -45,16 +45,16 @@ a {
     transition: color 0.3s;
 }
 
-a:hover {
+main a:hover {
     color: #d56e55;
     text-decoration: underline;
 }
 
-a:visited {
+main a:visited {
     color: #333333;
     text-decoration: underline;
 }
-*/
+
 .section-separator {
     background-color: #cccccc;
     border: 0;
@@ -106,6 +106,13 @@ a:visited {
     text-align: left;
     vertical-align: middle;
     transition: border-color 0.3s, border 0.3s, color 0.3s;
+}
+
+.table-head {
+    color: #999999;
+    font-family: system-ui, sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
 }
 
 #resultTable th:first-child,
