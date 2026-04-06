@@ -1,11 +1,11 @@
 /* MENU */
-nav {
+nav#menu {
     background-color: transparent;
     display: flex;
     justify-content: center;
     padding: 5px;
     position: relative; /* pozwala menu rozciągać się w dół */
-    transition: transform 0.3s ease;
+    /*transition: transform 0.3s ease;*/
     width: 220px;
     z-index: 1200;
 }
@@ -42,7 +42,7 @@ nav {
     text-transform: uppercase;
 }
 
-nav a {
+nav#menu a {
     border-radius: 4px;
     box-sizing: border-box;
     color: #000000;
@@ -55,16 +55,17 @@ nav a {
     width: 100%;
 }
 
-nav a:hover {
+nav#menu a:hover {
     background-color: #f9d7cf;
     color: #763d2f;
 }
 
-nav a:active {
+nav#menu a:active {
     background-color: #f9d7cf;
     color: #763d2f;
 }
 
+/* github-icon */
 .icon {
     align-items: center;  /* Wyrównuje tekst i obrazek w pionie */
     display: inline-flex; /* Pozwala na ustawienie elementów w linii */
@@ -80,7 +81,7 @@ nav a:active {
     width: 20px;
 }
 
-/* Krzyżyk */
+/* krzyżyk */
 .xmark-icon {
     align-items: center;
     display: none;
