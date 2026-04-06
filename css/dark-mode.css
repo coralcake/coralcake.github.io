@@ -28,17 +28,21 @@ body.dark-mode nav .nav-wrapper {
     border: 1px solid #464646;
 }
 
-body.dark-mode nav a {
+.nav-title {
+    color: #8c8c8c;
+}
+
+body.dark-mode nav#menu a {
     color: #e0e0e0; /* nieco ciemniejszy biały */
 }
 
-body.dark-mode nav a:hover {
+body.dark-mode nav#menu a:hover {
     background-color: #333333;
     color: #ed7b5f;
 }
 
 body.dark-mode h1 {
-    color: #999999;
+    color: #8c8c8c;
     font-family: system-ui, sans-serif;
     font-size: 20px;
 }
@@ -54,8 +58,8 @@ body.dark-mode p {
     font-family: system-ui, sans-serif;
     font-size: 14px;
 }
-/*
-body.dark-mode a {
+
+body.dark-mode main a {
     color: #e0e0e0;
     font-family: system-ui, sans-serif;
     font-size: 14px;
@@ -63,16 +67,16 @@ body.dark-mode a {
     transition: color 0.3s;
 }
 
-body.dark-mode a:hover {
+body.dark-mode main a:hover {
     color: #ed7b5f;
     text-decoration: underline;
 }
 
-body.dark-mode a:visited {
+body.dark-mode main a:visited {
     color: #999999;
     text-decoration: underline;
 }
-*/
+
 body.dark-mode .section-separator {
     background-color: #464646;
     border: 0;
@@ -95,14 +99,21 @@ body.dark-mode #generateButton:hover {
 
 /* przycisk kliknięty */
 body.dark-mode #generateButton:active {
-    background-color: #282828; /* coś pomiędzy 21 a 2a */
+    background-color: #282828; /* coś pomiędzy 25 a 28 */
     color: #d56e55;            /* ciemniejszy kolorowy */
+}
+
+body.dark-mode #resultTable {
+    color: #e0e0e0; /* kolor tekstu */
 }
 
 body.dark-mode #resultTable th,
 body.dark-mode #resultTable td {
     border: 1px solid #464646;
-    color: #e0e0e0;
+}
+
+body.dark-mode .table-head {
+    color: #8c8c8c;
 }
 
 body.dark-mode footer {
