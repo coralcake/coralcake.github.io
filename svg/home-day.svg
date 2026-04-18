@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="20" height="20" 
+     viewBox="0 0 24 24" 
+     fill="none" 
+     stroke="#ee886f" 
+     stroke-width="2" 
+     stroke-linecap="round" 
+     stroke-linejoin="round">
+
+  <!-- dach -->
+  <path d="M3 10L12 3L21 10" />
+
+  <!-- ściany -->
+  <path d="M5 10V21H19V10" />
+
+  <!-- drzwi -->
+  <path d="M9 21V14H15V21" />
+
+</svg>
