@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <script>
+        (function(){
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.style.transition = 'none';
+                document.body.classList.add('dark-mode');
+                
+                document.body.addEventListener('DOMContentLoaded', () => {
+                    document.body.style.transition = '';
+                })
+            }
+        })();
+    </script>
     <header>
         <div class="menu-left">
             <div class="hamburger" onclick="showMenu()">
@@ -15,20 +27,20 @@
                 <div></div>
             </div>
             <div class="switch-lang">
-                <img src="/svg/flag-uk.svg" alt="English" class="flag-icon" id="flag1" height=14>
-                <img src="/svg/flag-pl.svg" alt="Polish" class="flag-icon darkened" id="flag2" height=14>
+                <img id="flag1" src="/svg/flag-uk.svg" alt="English" class="flag-icon" height=14>
+                <img id="flag2" src="/svg/flag-pl.svg" alt="Polish" class="flag-icon darkened" height=14>
             </div>
         </div>
         
         <div class="logo-center">
             <a href="https://coralcake.github.io">
-                <img src="/svg/avatar-coralcake.svg" alt="Logo" height=40>
+                <img src="/svg/avatar-coralcake.svg" alt="Logo" height=40 width=40>
             </a>
             <span class="logo-text">my playground</span>
         </div>
         
         <div class="switch-right">
-            <img id="modeImage" src="/svg/mode-light.svg" width=20 alt="Light/Dark Mode">
+            <img id="modeImage" src="/svg/mode-light.svg" alt="Light/Dark Mode" height=20 width=20>
             <label class="switch-mode">
                 <input type="checkbox" id="modeToggle">
                 <span class="slider"></span>
@@ -40,12 +52,17 @@
         <nav id="menu">
             <div class="nav-wrapper">
                 <div class="nav-section">
-                    <div class="xmark-icon" onclick="hideMenu()">
-                        <img id="xmarkIcon" src="/svg/xmark-day.svg" alt="Close Menu" height=24>
+                    <div class="menu-icons">
+                        <div onclick="window.location.href='https://coralcake.github.io'">
+                            <img id="homeIcon" src="/svg/home-day.svg" alt="Go Home" height=20 width=20>
+                        </div>
+                        <div onclick="hideMenu()">
+                            <img id="xmarkIcon" src="/svg/xmark-day.svg" alt="Close Menu" height=20 width=20>
+                        </div>
                     </div>
                     <div class="nav-title">Follow me</div>
                     <a href="https://github.com/coralcake" class="icon">
-                        <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub" height=20>
+                        <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub" height=20 width=20>
                         on GitHub: @coralcake
                     </a>
                 </div>
@@ -53,12 +70,15 @@
                     <div class="nav-title">Drawing idea generators</div>
                     <a href="#generator-8">8-category generator</a>
                     <a href="#generator-10">10-category generator</a>
+                    <a href="#generator-chaos">Chaos-based generator</a>
+                    <a href="#generator-3-act">3-act generator</a>
+                    <a href="#generator-arch">Archetype generator</a>
                     <a href="#generator-textures">Texture generator</a>
                 </div>
                 <div class="nav-section">
                     <div class="nav-title">Art database</div>
-                    <a href="/pages/art-database.html#art-traditional">Traditional artworks</a>
-                    <a href="/pages/art-database.html#art-digital">Digital artworks</a>
+                    <a href="/pages/art-database.html#art-traditional">🛠️ Traditional artworks</a>
+                    <a href="/pages/art-database.html#art-digital">🛠️ Digital artworks</a>
                 </div>
             </div>
         </nav>
@@ -68,15 +88,9 @@
             
             <div id="generator-8">
                 <h2>8-category generator</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            
-            <hr class="section-separator" />
-            
-            <div id="generator-10">
-                <h2>10-category generator</h2>
-                <button id="generateButton">Generate</button>
-                <table id="resultTable" border="1" cellpadding="8" cellspacing="0">
+                <p>A highly popular system among artists and designers. A structured creative tool that helps generate balanced visual ideas by combining eight key elements into cohesive concepts for illustration and design.</p>
+                <button class="generateButton" data-type="tab-gen-8" data-target="resultTable1">Generate</button>
+                <table id="resultTable1" class="resultTable" border="1" cellpadding="8" cellspacing="0">
                     <thead>
                         <tr>
                             <th class="table-head">Category</th>
@@ -88,12 +102,97 @@
                 </table>
             </div>
             
-            <hr class="section-separator" />
+            <hr class="section-separator"/>
+            
+            <div id="generator-10">
+                <h2>10-category generator</h2>
+                <p>An expanded creative framework that builds richer and more detailed concepts by combining ten interconnected elements, ideal for advanced visual storytelling and world-building.</p>
+                <button class="generateButton" data-type="tab-gen-10" data-target="resultTable2">Generate</button>
+                <table id="resultTable2" class="resultTable" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="table-head">Category</th>
+                            <th class="table-head">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            
+            <hr class="section-separator"/>
+            
+            <div id="generator-chaos">
+                <h2>Chaos-based generator</h2>
+                <p>A creative system used by illustrators and designers to break predictable thinking patterns and generate unexpected visual concepts. It combines structured randomness with surreal transformations, producing imaginative prompts that push ideas beyond logic, encouraging experimentation, abstraction, and bold visual storytelling.</p>
+                <button class="generateButton" data-type="tab-gen-chaos" data-target="resultTable3">Generate</button>
+                <table id="resultTable3" class="resultTable" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="table-head">Category</th>
+                            <th class="table-head">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            
+            <hr class="section-separator"/>
+            
+            <div id="generator-3-act">
+                <h2>3-act generator</h2>
+                <p>A story sketch generator designed to help build clear narrative structures. It organizes ideas into three stages - setup, complication, and resolution - making it easy to quickly outline compelling plots.</p>
+                <button class="generateButton" data-type="tab-gen-3-act" data-target="resultTable4">Generate</button>
+                <table id="resultTable4" class="resultTable" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="table-head">Category</th>
+                            <th class="table-head">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            
+            <hr class="section-separator"/>
+            
+            <div id="generator-archetype">
+                <h2>Archetype generator</h2>
+                <p>Inspired by tarot, each option acts as an archetype that shapes the core of an idea. These archetypes work as symbolic building blocks - each one carrying a distinct narrative tension, emotional tone, or conceptual direction.</p>
+                <button class="generateButton" data-type="tab-gen-arch" data-target="resultTable5">Generate</button>
+                <table id="resultTable5" class="resultTable" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="table-head">Category</th>
+                            <th class="table-head">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            
+            <hr class="section-separator"/>
             
             <div id="generator-textures">
                 <h2>Texture generator</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>A visual exploration tool for artists and designers focused on developing control, depth, and material realism through ink-based shading. It generates structured prompts for practicing a wide range of surface textures - from organic to synthetic - helping you build precision, contrast awareness, and expressive line work.</p>
+                <button class="generateButton" data-type="tab-gen-tex" data-target="resultTable6">Generate</button>
+                <table id="resultTable6" class="resultTable" border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th class="table-head">Category</th>
+                            <th class="table-head">Result</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
             </div>
+            
+            <button class="backButton" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Back to top">⬆ Back to  top</button>
         </section>
     </main>
     
@@ -106,6 +205,6 @@
     <script src="/js/menu-mobile.js"></script>
     <script src="/js/dark-light-mode.js"></script>
     <script src="/js/darkening-image.js"></script>
-    <script src="/js/10-category-generator.js"></script>
+    <script src="/js/generators.js"></script>
 </body>
 </html>
