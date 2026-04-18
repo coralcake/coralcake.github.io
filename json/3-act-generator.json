@@ -1,0 +1,23 @@
+{
+  "act_1_start": [
+    "someone finds a strange object",
+    "a stranger appears",
+    "something stops working",
+    "the protagonist receives a message",
+    "something disappears"
+  ],
+  "act_2_complication": [
+    "someone reveals a secret",
+    "a rival appears",
+    "the protagonist discovers the truth",
+    "the situation gets worse",
+    "the protagonist makes a mistake"
+  ],
+  "act_3_finale": [
+    "sacrifice",
+    "unexpected victory",
+    "escape",
+    "acceptance of fate",
+    "return to the beginning"
+  ]
+}

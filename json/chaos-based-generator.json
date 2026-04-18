@@ -1,0 +1,30 @@
+{
+  "object": [
+    "house",
+    "animal",
+    "machine",
+    "city",
+    "tree"
+  ],
+  "mutation": [
+    "giant",
+    "transparent",
+    "mechanical",
+    "made of plants",
+    "made of ice"
+  ],
+  "action": [
+    "grows",
+    "falls apart",
+    "flows",
+    "explodes",
+    "spins"
+  ],
+  "environment": [
+    "in space",
+    "underwater",
+    "in the desert",
+    "in the clouds",
+    "in ruins"
+  ]
+}

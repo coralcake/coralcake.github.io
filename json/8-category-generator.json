@@ -1,0 +1,67 @@
+{
+  "theme_or_object": [
+    "city",
+    "animal",
+    "machine",
+    "human",
+    "plant",
+    "ruin",
+    "island",
+    "vehicle"
+  ],
+  "location": [
+    "underwater",
+    "on a rooftop",
+    "in space",
+    "in a forest",
+    "in an abandoned building",
+    "in a snowstorm",
+    "in a labyrinth"
+  ],
+  "emotion": [
+    "nostalgia",
+    "fear",
+    "calm",
+    "awe",
+    "loneliness",
+    "chaos"
+  ],
+  "style": [
+    "surrealism",
+    "retro futurism",
+    "minimalism",
+    "cyberpunk",
+    "baroque",
+    "brutalism"
+  ],
+  "color_palette": [
+    "only 2 colors",
+    "monochromatic",
+    "pastel",
+    "neon",
+    "black and gold",
+    "very high contrast"
+  ],
+  "perspective": [
+    "bird’s-eye view",
+    "macro (very close)",
+    "ground level",
+    "through glass",
+    "through a mirror",
+    "from behind the character"
+  ],
+  "weirdness_element": [
+    "something is gigantic",
+    "something is falling apart",
+    "something is floating in the air",
+    "something is upside down",
+    "something is half-alive"
+  ],
+  "creative_constraint": [
+    "only 15 minutes of work",
+    "only one brush / tool",
+    "no use of black",
+    "only geometric shapes",
+    "only lines"
+  ]
+}

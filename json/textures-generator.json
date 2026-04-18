@@ -1,0 +1,113 @@
+{
+  "characters": [
+    "hair",
+    "eyes",
+    "teeth",
+    "saliva",
+    "blood",
+    "nails",
+    "skin",
+    "bones/skeleton",
+    "muscles",
+    "silk clothing",
+    "leather clothing",
+    "metal clothing",
+    "linen clothing",
+    "wool clothing"
+  ],
+  "accessories": [
+    "armour",
+    "weapons",
+    "jewelry",
+    "interior household items"
+  ],
+  "architecture": {
+    "surfaces": [
+      "wood paneling",
+      "brick",
+      "glass",
+      "drapery",
+      "tile",
+      "ceramic",
+      "ornaments",
+      "metal",
+      "steel",
+      "wire",
+      "cables",
+      "plastic",
+      "plaster",
+      "concrete"
+    ],
+    "exterior_structures": [
+      "fence",
+      "bridge",
+      "post",
+      "street lights",
+      "sculptures"
+    ],
+    "buildings": [
+      "house",
+      "castle",
+      "fortress",
+      "high-rise",
+      "cabin",
+      "tent"
+    ]
+  },
+  "technology": [
+    "spaceships",
+    "planes",
+    "motor vehicles",
+    "computers",
+    "boats",
+    "gadgets"
+  ],
+  "nature": [
+    "grass",
+    "rocks",
+    "boulders",
+    "dirt",
+    "botanicals",
+    "forests",
+    "mountains",
+    "lakes",
+    "glaciers",
+    "waves",
+    "waterfalls",
+    "food",
+    "sludge",
+    "caves",
+    "craters"
+  ],
+  "atmospheric": [
+    "flames",
+    "clouds",
+    "sky",
+    "wind",
+    "sunrays",
+    "rain",
+    "snow",
+    "fog",
+    "smoke",
+    "night",
+    "dusk",
+    "dawn"
+  ],
+  "animal": [
+    "fur",
+    "scales",
+    "horns",
+    "claws",
+    "feathers",
+    "fangs",
+    "tongues",
+    "wings",
+    "beaks"
+  ],
+  "miscellaneous": [
+    "movement",
+    "non-descript backgrounds",
+    "motifs",
+    "designs"
+  ]
+}
