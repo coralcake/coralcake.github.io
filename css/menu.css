@@ -5,8 +5,7 @@ nav#menu {
     justify-content: center;
     padding: 5px;
     position: relative; /* pozwala menu rozciągać się w dół */
-    /*transition: transform 0.3s ease;*/
-    width: 220px;
+    width: 250px; /* to samo zmienić w mobile.css */
     z-index: 1200;
 }
 
@@ -28,8 +27,8 @@ nav#menu {
 }
 
 .nav-section {
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     width: 100%;
 }
 
@@ -81,16 +80,28 @@ nav#menu a:active {
     width: 20px;
 }
 
-/* krzyżyk */
-.xmark-icon {
+/* home i krzyżyk */
+.menu-icons {
     align-items: center;
+    box-sizing: border-box;
     display: none;
-    justify-content: flex-end;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 6px;
     width: 100%;
 }
 
-.xmark-icon img {
+.menu-icons div {
+    border-radius: 5px;
     cursor: pointer;
-    height: 24px;
-    width: 24px;
+    padding: 5px;
+    transition: background 0.2s ease;
+}
+
+.menu-icons div:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.menu-icons img {
+    display: block; /* dzięki temu nie zostawia miejsca pod spodem obrazka */
 }
