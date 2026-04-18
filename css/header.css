@@ -1,125 +1,124 @@
 /* HEADER */
 header {
-    background-color: #f5f5f5;
-    color: #333333;
-    border-bottom: 1px solid #cccccc;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between; /* rozrzuć elementy */
     align-items: center; /* wyśrodkowanie w pionie */
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #cccccc;
+    color: #333333;
+    display: flex;
     font-size: 24px;
+    justify-content: space-between; /* rozrzuć elementy */
+    padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 .menu-left {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 20px;
 }
 
 /* LANGUAGE TOGGLE */
 .switch-lang {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 5px;
 }
 
 .flag-icon {
     border: 1px solid #bbbbbb;
     cursor: pointer;
-    height: 14px;
     transition: border-color 0.3s, transform 0.3s ease, filter 0.3s ease;
 }
 
 .darkened {
-    filter: brightness(75%);
+    filter: brightness(90%) opacity(60%);
     transform: scale(0.8);
 }
 
 /* HAMBURGER */
 .hamburger {
+    cursor: pointer;
     display: none;
     flex-direction: column; /* trzy kreski w pionie */
     gap: 5px; /* odstęp między kreskami */
     z-index: 1100;
-    cursor: pointer;
 }
 
 .hamburger div {
-    width: 25px;
-    height: 3px;
     background-color: #555555;
+    height: 3px;
     transition: background-color 0.3s;
+    width: 25px;
 }
 
 /* LOGO */
 .logo-center {
-    display: flex;
-    text-align: center;
     align-items: center;
-    margin-bottom: 0px;
+    display: flex;
     gap: 10px;
+    margin-bottom: 0px;
+    text-align: center;
+    user-select: none;
 }
 
 .logo-center img {
-    width: 40px;
-    height: 40px;
     border-radius: 50%; /* robi koło */
     object-fit: cover;  /* żeby obrazek się nie rozciągał */
     vertical-align: middle; /* wyrównuje obrazek względem tekstu */
 }
 
 .logo-text {
+    color: #333333;
+    cursor: default;
     font-family: system-ui, sans-serif;
     font-size: 20px;
-    color: #333333;
-    transition: color 0.3s;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* h-shadow v-shadow blur-radius color */
+    transition: color 0.3s;
 }
 
 /* LIGHT/DARK TOGGLE */
 .switch-right {
-    display: flex;
     align-items: center;
+    display: flex;
     gap: 5px;
 }
 
 .switch-mode {
-    position: relative;
     display: inline-block;
-    width: 40px;
     height: 20px;
+    position: relative;
+    width: 40px;
 }
 
 .switch-mode input {
+    height: 0;
     opacity: 0; /* ukrycie checkboxa */
     width: 0;
-    height: 0;
 }
 
 /* suwak w lewo = light mode */
 .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background-color: #e0e0e0; /* szare tło suwaka */
-    transition: 0.3s;
     border-radius: 20px; /* zaokrąglony prostokąt */
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: 0.3s;
 }
 
 .slider:before {
-    position: absolute;
+    background-color: #ffffff; /* białe kółko */
+    border-radius: 50%; /* robi koło */
     content: ""; /* to konieczne, aby był widoczny */
     height: 16px;
-    width: 16px;
     left: 2px;
+    position: absolute;
     top: 2px;
-    background-color: #ffffff; /* białe kółko */
     transition: 0.3s;
-    border-radius: 50%; /* robi koło */
+    width: 16px;
 }
 
 /* suwak w prawo = dark mode */
@@ -128,6 +127,6 @@ input:checked + .slider  {
 }
 
 input:checked + .slider:before {
-    transform: translateX(20px); /* przesunięcie kółka */
     background-color: #e0e0e0; /* jasne kółko */
+    transform: translateX(20px); /* przesunięcie kółka */
 }
