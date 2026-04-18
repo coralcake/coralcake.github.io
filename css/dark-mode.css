@@ -41,6 +41,10 @@ body.dark-mode nav#menu a:hover {
     color: #ed7b5f;
 }
 
+body.dark-mode .menu-icons div:hover {
+    background-color: #333333;
+}
+
 body.dark-mode h1 {
     color: #8c8c8c;
     font-family: system-ui, sans-serif;
@@ -84,31 +88,31 @@ body.dark-mode .section-separator {
     margin: 50px 0;
 }
 
-body.dark-mode #generateButton {
+body.dark-mode .generateButton {
     background-color: #252525; /* ciemny szary */
     border: 1px solid #464646; /* jasny szary */
     color: #ffffff;            /* biały */
 }
 
 /* przycisk podświetlony */
-body.dark-mode #generateButton:hover {
+body.dark-mode .generateButton:hover {
     background-color: #2b2b2b; /* jaśniejszy, ale ciemniejszy od tła */
     border-color: #464646;     /* ten sam */
     color: #ee886f;            /* kolorowy */
 }
 
 /* przycisk kliknięty */
-body.dark-mode #generateButton:active {
+body.dark-mode .generateButton:active {
     background-color: #282828; /* coś pomiędzy 25 a 28 */
     color: #d56e55;            /* ciemniejszy kolorowy */
 }
 
-body.dark-mode #resultTable {
+body.dark-mode .resultTable {
     color: #e0e0e0; /* kolor tekstu */
 }
 
-body.dark-mode #resultTable th,
-body.dark-mode #resultTable td {
+body.dark-mode .resultTable th,
+body.dark-mode .resultTable td {
     border: 1px solid #464646;
 }
 
@@ -125,4 +129,21 @@ body.dark-mode footer {
 body.dark-mode .footer-text {
     color: #e0e0e0;
     font-size: 15px;
+}
+
+body.dark-mode .backButton {
+    background-color: #252525; /* ciemny szary */
+    border: 1px solid #464646; /* jasny szary */
+    color: #8c8c8c;            /* jaśniejszy szary */
+}
+
+body.dark-mode .backButton:hover {
+    background-color: #2b2b2b; /* jaśniejszy, ale ciemniejszy od tła */
+    border-color: #464646;     /* ten sam */
+    color: #ee886f;            /* kolorowy */
+}
+
+body.dark-mode .backButton:active {
+    background-color: #282828; /* coś pomiędzy 25 a 28 */
+    color: #d56e55;            /* ciemniejszy kolorowy */
 }
