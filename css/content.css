@@ -8,9 +8,12 @@ main {
 
 section {
     box-sizing: border-box;
-    margin: 0 auto;
-    padding: 20px;
-    width: 800px;
+    margin: 0 auto; /* auto centruje sekcję */
+    padding-top: 10px;
+    padding-bottom: 55px;
+    padding-left: 40px;
+    padding-right: 40px;
+    width: 800px;  /* faktycznie 720, bo 800-2x40=720 przy border-box */
 }
 
 h1 {
@@ -58,12 +61,12 @@ main a:visited {
 .section-separator {
     background-color: #cccccc;
     border: 0;
-    height: 1px;
+    height: 1px; /* koniecznie tutaj */
     margin: 50px 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
-#generateButton {
+.generateButton {
     background-color: #fafafa;
     border: 1px solid #d9d9d9;
     border-radius: 18px / 18px;
@@ -77,30 +80,31 @@ main a:visited {
 }
 
 /* przycisk podświetlony */
-#generateButton:hover {
+.generateButton:hover {
     background-color: #f9d7cf;
     border-color: #f4af9f;
     color: #763d2f;
 }
 
 /* przycisk kliknięty */
-#generateButton:active {
+.generateButton:active {
     background-color: #f6bdaf;
     color: #47241c;
 }
 
-#resultTable {
+.resultTable {
     border-collapse: collapse;
     color: #333333; /* kolor tekstu */
+    display: none;
     font-family: system-ui, sans-serif;
     font-size: 14px;
-    max-width: 768px;
+    margin-top: 14px;
     width: 100%;
     transition: color 0.3s;
 }
 
-#resultTable th,
-#resultTable td {
+.resultTable th,
+.resultTable td {
     border: 1px solid #cccccc;
     padding: 8px 12px;
     text-align: left;
@@ -115,12 +119,37 @@ main a:visited {
     text-transform: uppercase;
 }
 
-#resultTable th:first-child,
-#resultTable td:first-child {
+.resultTable th:first-child,
+.resultTable td:first-child {
     width: 150px;
 }
 
-#resultTable th:last-child,
-#resultTable td:last-child {
+.resultTable th:last-child,
+.resultTable td:last-child {
     width: auto;
+}
+
+.backButton {
+    background-color: #fafafa;
+    border: 1px solid #d9d9d9;
+    border-radius: 18px / 18px;
+    color: #999999;
+    cursor: pointer;
+    font-size: 14px;
+    height: 36px;
+    position: fixed;
+    right: 45px;
+    bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.backButton:hover {
+    background-color: #f9d7cf;
+    border-color: #f4af9f;
+    color: #763d2f;
+}
+
+.backButton:active {
+    background-color: #f6bdaf;
+    color: #47241c;
 }
