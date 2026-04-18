@@ -1,11 +1,22 @@
 /* RESPONSYWNOŚĆ */
-/* content 800px + padding 2x20px + menu 220px = 1060px */
-@media (max-width: 1060px) {
+/* content 800px + padding 2x20px + menu 250px = 1090px */
+/* 1090px zmienić w menu-mobile.js */
+@media (max-width: 1090px) {
+    main {
+        flex-direction: column;
+    }
+    
+    section {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 800px;
+    }
+    
     .hamburger {
         display: flex;
     }
     
-    .xmark-icon {
+    .menu-icons {
         display: inline-flex;
     }
     
@@ -20,7 +31,7 @@
         position: fixed; /* menu jest zawsze widoczne */
         top: 0;
         transform: translateX(-100%); /* ukryte po lewej stronie */
-        width: 220px;
+        width: 250px; /* to samo zmienić w menu.css */
         z-index: 1200;
     }
     
@@ -32,17 +43,8 @@
     }
     
     .nav-section {
-        margin-bottom: 40px;
+        margin-bottom: 30px; /* 2x15px z menu.css */
         margin-top: 0px;
-    }
-    
-    main {
-        flex-direction: column;
-    }
-    
-    section {
-        margin: 20px auto;
-        width: 100%;
     }
     
     #overlay {
