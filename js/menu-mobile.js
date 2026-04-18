@@ -15,7 +15,7 @@ function hideMenu() {
 
 // RESET przy resize
 function handleResize() {
-    if (window.innerWidth > 1060) {
+    if (window.innerWidth > 1090) {
         // Desktop – menu zawsze widoczne
         menu.style.transition = 'none';  // bez animacji
         menu.style.transform = 'translateX(0)';
