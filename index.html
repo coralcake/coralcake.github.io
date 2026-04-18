@@ -7,23 +7,35 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <script>
+        (function(){
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                document.body.style.transition = 'none';
+                document.body.classList.add('dark-mode');
+                
+                document.body.addEventListener('DOMContentLoaded', () => {
+                    document.body.style.transition = '';
+                })
+            }
+        })();
+    </script>
     <header>
         <div class="menu-left">
             <div class="switch-lang">
-                <img src="/svg/flag-uk.svg" alt="English" class="flag-icon" id="flag1" height=14>
-                <img src="/svg/flag-pl.svg" alt="Polish" class="flag-icon darkened" id="flag2" height=14>
+                <img id="flag1" src="/svg/flag-uk.svg" alt="English" class="flag-icon" height=14>
+                <img id="flag2" src="/svg/flag-pl.svg" alt="Polish" class="flag-icon darkened" height=14>
             </div>
         </div>
         
         <div class="logo-center">
             <a href="https://coralcake.github.io">
-                <img src="/svg/avatar-coralcake.svg" alt="Logo" height=40>
+                <img src="/svg/avatar-coralcake.svg" alt="Logo" height=40 width=40>
             </a>
             <span class="logo-text">my playground</span>
         </div>
         
         <div class="switch-right">
-            <img id="modeImage" src="/svg/mode-light.svg" width=20 alt="Light/Dark Mode">
+            <img id="modeImage" src="/svg/mode-light.svg" alt="Light/Dark Mode" height=20 width=20>
             <label class="switch-mode">
                 <input type="checkbox" id="modeToggle">
                 <span class="slider"></span>
@@ -35,32 +47,32 @@
         <section id="grid">
             <div class="nav-section">
                 <div class="nav-title">Drawing idea generators</div>
-                <a href="/pages/generators.html#generator-8">8-category generator</a>
-                <a href="/pages/generators.html#generator-10">10-category generator</a>
+                <a href="/pages/generators.html#generator-8">8-category generator</a><br>
+                <a href="/pages/generators.html#generator-10">10-category generator</a><br>
+                <a href="/pages/generators.html#generator-chaos">Chaos-based generator</a><br>
+                <a href="/pages/generators.html#generator-3-act">3-act generator</a><br>
+                <a href="/pages/generators.html#generator-arch">Archetype generator</a><br>
                 <a href="/pages/generators.html#generator-textures">Texture generator</a>
             </div>
             <div class="nav-section">
                 <div class="nav-title">Art database</div>
-                <a href="/pages/art-database.html#art-traditional">Traditional artworks</a>
-                <a href="/pages/art-database.html#art-digital">Digital artworks</a>
+                <a href="/pages/art-database.html#art-traditional">🛠️ Traditional artworks</a><br>
+                <a href="/pages/art-database.html#art-digital">🛠️ Digital artworks</a>
             </div>
             <div class="nav-section">
                 <div class="nav-title">Follow me</div>
                 <a href="https://github.com/coralcake" class="icon">
-                    <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub" height=20>
+                    <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub" height=20 width=20>
                     on GitHub: @coralcake
                 </a>
             </div>
         </section>
     </main>
     
-    <div id="overlay" onclick="hideMenu()"></div>
-    
     <footer>
         <span class="footer-text">© 2026 coralcake</span>
     </footer>
     
-    <script src="/js/menu-mobile.js"></script>
     <script src="/js/dark-light-mode.js"></script>
     <script src="/js/darkening-image.js"></script>
 </body>
