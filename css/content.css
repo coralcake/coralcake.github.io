@@ -9,18 +9,22 @@ main {
 section {
     box-sizing: border-box;
     margin: 0 auto; /* auto centruje sekcję */
-    padding-top: 10px;
+    padding-top: 20px;
     padding-bottom: 55px;
     padding-left: 40px;
     padding-right: 40px;
-    width: 800px;  /* faktycznie 720, bo 800-2x40=720 przy border-box */
+    width: 800px; /* faktycznie 720, bo 800-2x40=720 przy border-box */
 }
 
 h1 {
-    color: #333333;
+    color: #464646;
     font-family: system-ui, sans-serif;
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
     transition: color 0.3s;
 }
 
@@ -28,8 +32,9 @@ h2 {
     color: #d56e55;
     font-family: system-ui, sans-serif;
     font-size: 18px;
-    margin-bottom: 12px;
-    margin-top: 20px;
+    margin: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
     transition: color 0.3s;
 }
 
@@ -40,29 +45,14 @@ p {
     transition: color 0.3s;
 }
 
-main a {
-    color: #763d2f;
-    font-family: system-ui, sans-serif;
-    font-size: 14px;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-main a:hover {
-    color: #d56e55;
-    text-decoration: underline;
-}
-
-main a:visited {
-    color: #333333;
-    text-decoration: underline;
-}
-
 .section-separator {
     background-color: #cccccc;
     border: 0;
     height: 1px; /* koniecznie tutaj */
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -77,6 +67,7 @@ main a:visited {
     margin: 20px 0;
     padding: 8px 18px;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 /* przycisk podświetlony */
@@ -99,6 +90,7 @@ main a:visited {
     font-family: system-ui, sans-serif;
     font-size: 14px;
     margin-top: 14px;
+    margin-bottom: 14px;
     width: 100%;
     transition: color 0.3s;
 }
@@ -132,15 +124,17 @@ main a:visited {
 .backButton {
     background-color: #fafafa;
     border: 1px solid #d9d9d9;
-    border-radius: 18px / 18px;
+    border-radius: 22px / 22px;
     color: #999999;
     cursor: pointer;
     font-size: 14px;
-    height: 36px;
+    height: 44px;
+    padding: 11px 16px;
     position: fixed;
     right: 45px;
     bottom: 40px;
     transition: all 0.3s ease;
+    user-select: none;
 }
 
 .backButton:hover {
@@ -152,4 +146,103 @@ main a:visited {
 .backButton:active {
     background-color: #f6bdaf;
     color: #47241c;
+}
+
+.tiles {
+    display: grid;
+    gap: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* grid-template-columns = definiuje ile kolumn (i jakie) ma siatka */
+    /* repeat = powtórz wiele razy */
+    /* auto-fit = stwórz tyle kolumn, ile się zmieści w kontenerze */
+    /* minmax(?,?) = minimalna i maksymalna wartość */
+    /* 220px = minimalna szerokość */
+    /* 1fr = 1 fraction, 1 część dostępnej przestrzeni po odjęciu padding, gap */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.tile {
+    cursor: pointer;
+    border-radius: 16px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none; /* koniecznie */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+.tile:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+    
+.tile:nth-child(6n) {
+    background: linear-gradient(135deg, #f5f5f5, #cfdff9); /* perła */
+}
+
+.tile:nth-child(6n+1) {
+    background: linear-gradient(135deg, #f5f5f5, #f9d7cf); /*koral */
+}
+
+.tile:nth-child(6n+2) {
+    background: linear-gradient(135deg, #f5f5f5, #cff6f9); /* niebo */
+}
+
+.tile:nth-child(6n+3) {
+    background: linear-gradient(135deg, #f5f5f5, #f9f4cf); /* piasek */
+}
+
+.tile:nth-child(6n+4) {
+    background: linear-gradient(135deg, #f5f5f5, #cfebf9); /* morze */
+}
+
+.tile:nth-child(6n+5) {
+    background: linear-gradient(135deg, #f5f5f5, #f9e4cf); /* brzoskwinia */
+}
+
+.tile h3,
+.tile:active h3,
+.tile:visited h3,
+.tile:hover h3 {
+    color: #333333;
+    font-size: 16px;
+    display: inline-block; /* zapewnia jednolite wyśrodkowanie w kontenerze */
+    text-align: center; /* koniecznie */
+    text-decoration: none;
+    line-height: 1.4; /* większy odstęp między wierszami */
+    transition: color 0.3s;
+}
+
+.follow,
+.follow:visited {
+    align-items: center;  /* Wyrównuje tekst i obrazek w pionie */
+    display: inline-flex; /* Pozwala na ustawienie elementów w linii */
+    gap: 6px;
+    color: #763d2f;
+    font-family: system-ui, sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.follow:hover {
+    color: #d56e55;
+    text-decoration: none;
+}
+
+.follow img {
+    border-radius: 50%; /* robi koło */
+    object-fit: cover;  /* żeby obrazek się nie rozciągał */
+    vertical-align: middle; /* wyrównuje obrazek względem tekstu */
 }
