@@ -34,7 +34,11 @@ window.addEventListener('resize', handleResize);
 
 // Zamykanie po kliknięciu w link w menu
 document.querySelectorAll('.nav-section a').forEach(link => {
-    link.addEventListener('click', hideMenu);
+    link.addEventListener('click', () => {
+        if (window.innerWidth <= 1090) {
+            hideMenu();
+        }
+    });
 });
 
 // Wywołanie przy starcie strony
