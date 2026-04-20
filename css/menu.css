@@ -45,7 +45,7 @@ nav#menu a {
     border-radius: 4px;
     box-sizing: border-box;
     color: #000000;
-    display: block;
+    display: inline-flex;
     font-size: 14px;
     margin: 0;
     padding: 6px 10px;
@@ -74,13 +74,11 @@ nav#menu a:active {
 
 .icon img {
     border-radius: 50%; /* robi koło */
-    height: 20px;
     object-fit: cover;  /* żeby obrazek się nie rozciągał */
     vertical-align: middle; /* wyrównuje obrazek względem tekstu */
-    width: 20px;
 }
 
-/* home i krzyżyk */
+/* home & krzyżyk */
 .menu-icons {
     align-items: center;
     box-sizing: border-box;
