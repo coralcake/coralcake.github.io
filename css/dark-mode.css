@@ -46,9 +46,9 @@ body.dark-mode .menu-icons div:hover {
 }
 
 body.dark-mode h1 {
-    color: #8c8c8c;
+    color: #c8c8c8;
     font-family: system-ui, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 body.dark-mode h2 {
@@ -63,29 +63,14 @@ body.dark-mode p {
     font-size: 14px;
 }
 
-body.dark-mode main a {
-    color: #e0e0e0;
-    font-family: system-ui, sans-serif;
-    font-size: 14px;
-    text-decoration: underline;
-    transition: color 0.3s;
-}
-
-body.dark-mode main a:hover {
-    color: #ed7b5f;
-    text-decoration: underline;
-}
-
-body.dark-mode main a:visited {
-    color: #999999;
-    text-decoration: underline;
-}
-
 body.dark-mode .section-separator {
     background-color: #464646;
     border: 0;
     height: 1px;
-    margin: 50px 0;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 body.dark-mode .generateButton {
@@ -146,4 +131,57 @@ body.dark-mode .backButton:hover {
 body.dark-mode .backButton:active {
     background-color: #282828; /* coś pomiędzy 25 a 28 */
     color: #d56e55;            /* ciemniejszy kolorowy */
+}
+
+body.dark-mode .tile {
+    background: linear-gradient(135deg, #505050, #333333);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    text-decoration: none; /* koniecznie */
+}
+
+body.dark-mode .tile:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .tile:nth-child(6n) {
+    border: 1px solid #2f4e9d; /* ciemny perłowy */
+}
+
+body.dark-mode .tile:nth-child(6n+1) {
+    border: 1px solid #9d412f; /* ciemny koral */
+}
+
+body.dark-mode .tile:nth-child(6n+2) {
+    border: 1px solid #2f909d; /* ciemne niebo */
+}
+
+body.dark-mode .tile:nth-child(6n+3) {
+    border: 1px solid #9d732f; /* ciemny piasek */
+}
+
+body.dark-mode .tile:nth-child(6n+4) {
+    border: 1px solid #2f809d; /* ciemne morze */
+}
+
+body.dark-mode .tile:nth-child(6n+5) {
+    border: 1px solid #9d662f; /* ciemna brzoskwinia */
+}
+
+body.dark-mode .tile h3,
+body.dark-mode .tile:visited h3,
+body.dark-mode .tile:active h3,
+body.dark-mode .tile:hover h3 {
+    color: #d4d4d4;
+    text-decoration: none;
+}
+
+body.dark-mode .follow,
+body.dark-mode .follow:visited {
+    color: #c8c8c8;
+    text-decoration: none;
+}
+
+body.dark-mode .follow:hover {
+    color: #ed7b5f;
+    text-decoration: none;
 }
