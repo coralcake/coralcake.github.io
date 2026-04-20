@@ -32,5 +32,10 @@ function handleResize() {
 // Podłączamy event
 window.addEventListener('resize', handleResize);
 
+// Zamykanie po kliknięciu w link w menu
+document.querySelectorAll('.nav-section a').forEach(link => {
+    link.addEventListener('click', hideMenu);
+});
+
 // Wywołanie przy starcie strony
 handleResize();
