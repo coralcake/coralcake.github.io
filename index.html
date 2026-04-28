@@ -9,7 +9,7 @@
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" >
     <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
 </head>
-<body>
+<body data-lang-files="common">
     <script>
         (function(){
             if (localStorage.getItem('darkMode') === 'enabled') {
@@ -48,51 +48,51 @@
     
     <main>
         <section>
-            <h1>Drawing idea generators</h1>
+            <h1 data-i18n="menu_generators">Drawing idea generators</h1>
             <div class="tiles">
                 <a class="tile" href="/pages/generators.html#generator-8">
-                    <h3>8-category generator</h3>
+                    <h3 data-i18n="menu_gen8">8-category generator</h3>
                 </a>
                 <a class="tile" href="/pages/generators.html#generator-10">
-                    <h3>10-category generator</h3>
+                    <h3 data-i18n="menu_gen10">10-category generator</h3>
                 </a>
                 <a class="tile" href="/pages/generators.html#generator-chaos">
-                    <h3>Chaos-based generator</h3>
+                    <h3 data-i18n="menu_chaos">Chaos-based generator</h3>
                 </a>
                 <a class="tile" href="/pages/generators.html#generator-3-act">
-                    <h3>3-act generator</h3>
+                    <h3 data-i18n="menu_3act">3-act generator</h3>
                 </a>
                 <a class="tile" href="/pages/generators.html#generator-archetype">
-                    <h3>Archetype generator</h3>
+                    <h3 data-i18n="menu_arch">Archetype generator</h3>
                 </a>
                 <a class="tile" href="/pages/generators.html#generator-textures">
-                    <h3>Texture generator</h3>
+                    <h3 data-i18n="menu_tex">Texture generator</h3>
                 </a>
             </div>
             
-            <h1>Art database</h1>
+            <h1 data-i18n="menu_database">Art database</h1>
             <div class="tiles">
                 <a class="tile" href="/pages/art-database.html#art-traditional">
-                    <h3>🛠️ Traditional artworks</h3>
+                    <h3 data-i18n="menu_arttra">🛠️ Traditional artworks</h3>
                 </a>
                 <a class="tile" href="/pages/art-database.html#art-digital">
-                    <h3>🛠️ Digital artworks</h3>
+                    <h3 data-i18n="menu_artdig">🛠️ Digital artworks</h3>
                 </a>
             </div>
             
-            <h1>Follow me</h1>
+            <h1 data-i18n="menu_follow">Follow me</h1>
             <a href="https://github.com/coralcake" class="follow">
                 <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub" height=20 width=20>
-                <span>on GitHub: @coralcake</span>
+                <span data-i18n="github_label">on GitHub: @coralcake</span>
             </a>
         </section>
     </main>
     
     <footer>
-        <span class="footer-text">© 2026 coralcake</span>
+        <span class="footer-text" data-i18n="footer">© 2026 coralcake</span>
     </footer>
     
     <script src="/js/dark-light-mode.js"></script>
-    <script src="/js/darkening-image.js"></script>
+    <script src="/js/lang-switch.js"></script>
 </body>
 </html>
