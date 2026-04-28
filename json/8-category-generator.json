@@ -1,67 +1,67 @@
 {
   "theme_or_object": [
-    "city",
-    "animal",
-    "machine",
-    "human",
-    "plant",
-    "ruin",
-    "island",
-    "vehicle"
+    { "en": "city", "pl": "miasto" },
+    { "en": "animal", "pl": "zwierzę" },
+    { "en": "machine", "pl": "maszyna" },
+    { "en": "human", "pl": "człowiek" },
+    { "en": "plant", "pl": "roślina" },
+    { "en": "ruin", "pl": "ruina" },
+    { "en": "island", "pl": "wyspa" },
+    { "en": "vehicle", "pl": "pojazd" }
   ],
   "location": [
-    "underwater",
-    "on a rooftop",
-    "in space",
-    "in a forest",
-    "in an abandoned building",
-    "in a snowstorm",
-    "in a labyrinth"
+    { "en": "underwater", "pl": "pod wodą" },
+    { "en": "on a rooftop", "pl": "na dachu" },
+    { "en": "in space", "pl": "w kosmosie" },
+    { "en": "in a forest", "pl": "w lesie" },
+    { "en": "in an abandoned building", "pl": "w opuszczonym budynku" },
+    { "en": "in a snowstorm", "pl": "w śnieżycy" },
+    { "en": "in a labyrinth", "pl": "w labiryncie" }
   ],
   "emotion": [
-    "nostalgia",
-    "fear",
-    "calm",
-    "awe",
-    "loneliness",
-    "chaos"
+    { "en": "nostalgia", "pl": "nostalgia" },
+    { "en": "fear", "pl": "strach" },
+    { "en": "calm", "pl": "spokój" },
+    { "en": "awe", "pl": "zachwyt" },
+    { "en": "loneliness", "pl": "samotność" },
+    { "en": "chaos", "pl": "chaos" }
   ],
   "style": [
-    "surrealism",
-    "retro futurism",
-    "minimalism",
-    "cyberpunk",
-    "baroque",
-    "brutalism"
+    { "en": "surrealism", "pl": "surrealizm" },
+    { "en": "retro futurism", "pl": "retro futuryzm" },
+    { "en": "minimalism", "pl": "minimalizm" },
+    { "en": "cyberpunk", "pl": "cyberpunk" },
+    { "en": "baroque", "pl": "barok" },
+    { "en": "brutalism", "pl": "brutalizm" }
   ],
   "color_palette": [
-    "only 2 colors",
-    "monochromatic",
-    "pastel",
-    "neon",
-    "black and gold",
-    "very high contrast"
+    { "en": "only 2 colors", "pl": "tylko 2 kolory" },
+    { "en": "monochromatic", "pl": "monochromatyczny" },
+    { "en": "pastel", "pl": "pastelowy" },
+    { "en": "neon", "pl": "neonowy" },
+    { "en": "black and gold", "pl": "czarny i złoty" },
+    { "en": "very high contrast", "pl": "bardzo wysoki kontrast" }
   ],
   "perspective": [
-    "bird’s-eye view",
-    "macro (very close)",
-    "ground level",
-    "through glass",
-    "through a mirror",
-    "from behind the character"
+    { "en": "bird’s-eye view", "pl": "widok z lotu ptaka" },
+    { "en": "macro (very close)", "pl": "makro (bardzo blisko)" },
+    { "en": "ground level", "pl": "z poziomu ziemi" },
+    { "en": "through glass", "pl": "przez szkło" },
+    { "en": "through a mirror", "pl": "przez lustro" },
+    { "en": "from behind the character", "pl": "zza postaci" }
   ],
   "weirdness_element": [
-    "something is gigantic",
-    "something is falling apart",
-    "something is floating in the air",
-    "something is upside down",
-    "something is half-alive"
+    { "en": "something is gigantic", "pl": "coś jest gigantyczne" },
+    { "en": "something is falling apart", "pl": "coś się rozpada" },
+    { "en": "something is floating in the air", "pl": "coś unosi się w powietrzu" },
+    { "en": "something is upside down", "pl": "coś jest do góry nogami" },
+    { "en": "something is half-alive", "pl": "coś jest półżywe" }
   ],
   "creative_constraint": [
-    "only 15 minutes of work",
-    "only one brush / tool",
-    "no use of black",
-    "only geometric shapes",
-    "only lines"
+    { "en": "only 15 minutes of work", "pl": "tylko 15 minut pracy" },
+    { "en": "only one brush / tool", "pl": "tylko jeden pędzel / narzędzie" },
+    { "en": "no use of black", "pl": "bez użycia czerni" },
+    { "en": "only geometric shapes", "pl": "tylko kształty geometryczne" },
+    { "en": "only lines", "pl": "tylko linie" }
   ]
 }
