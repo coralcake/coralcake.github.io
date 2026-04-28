@@ -1,82 +1,82 @@
 {
   "theme_or_object": [
-    "city",
-    "character",
-    "animal",
-    "machine",
-    "temple",
-    "garden",
-    "vehicle",
-    "island"
+    { "en": "city", "pl": "miasto" },
+    { "en": "character", "pl": "postać" },
+    { "en": "animal", "pl": "zwierzę" },
+    { "en": "machine", "pl": "maszyna" },
+    { "en": "temple", "pl": "świątynia" },
+    { "en": "garden", "pl": "ogród" },
+    { "en": "vehicle", "pl": "pojazd" },
+    { "en": "island", "pl": "wyspa" }
   ],
   "location": [
-    "in space",
-    "underwater",
-    "in ruins",
-    "in the jungle",
-    "in the desert",
-    "in the clouds",
-    "underground"
+    { "en": "in space", "pl": "w kosmosie" },
+    { "en": "underwater", "pl": "pod wodą" },
+    { "en": "in ruins", "pl": "w ruinach" },
+    { "en": "in the jungle", "pl": "w dżungli" },
+    { "en": "in the desert", "pl": "na pustyni" },
+    { "en": "in the clouds", "pl": "w chmurach" },
+    { "en": "underground", "pl": "pod ziemią" }
   ],
   "era_or_mood": [
-    "ancient",
-    "medieval",
-    "modern",
-    "retro futuristic",
-    "cyberpunk",
-    "post-apocalyptic"
+    { "en": "ancient", "pl": "starożytny" },
+    { "en": "medieval", "pl": "średniowieczny" },
+    { "en": "modern", "pl": "nowoczesny" },
+    { "en": "retro futuristic", "pl": "retro futurystyczny" },
+    { "en": "cyberpunk", "pl": "cyberpunk" },
+    { "en": "post-apocalyptic", "pl": "postapokaliptyczny" }
   ],
   "emotion": [
-    "nostalgia",
-    "tension",
-    "calm",
-    "melancholy",
-    "awe",
-    "loneliness"
+    { "en": "nostalgia", "pl": "nostalgia" },
+    { "en": "tension", "pl": "napięcie" },
+    { "en": "calm", "pl": "spokój" },
+    { "en": "melancholy", "pl": "melancholia" },
+    { "en": "awe", "pl": "zachwyt" },
+    { "en": "loneliness", "pl": "samotność" }
   ],
   "color_palette": [
-    "monochromatic",
-    "pastel",
-    "neon",
-    "black and gold",
-    "cool (blue)",
-    "warm (orange)"
+    { "en": "monochromatic", "pl": "monochromatyczny" },
+    { "en": "pastel", "pl": "pastelowy" },
+    { "en": "neon", "pl": "neonowy" },
+    { "en": "black and gold", "pl": "czarny i złoty" },
+    { "en": "cool (blue)", "pl": "chłodne (niebieskie)" },
+    { "en": "warm (orange)", "pl": "ciepłe (pomarańczowe)" }
   ],
   "perspective": [
-    "bird's-eye view",
-    "macro (very close)",
-    "ground level",
-    "through glass",
-    "from behind the character",
-    "from inside an object"
+    { "en": "bird's-eye view", "pl": "widok z lotu ptaka" },
+    { "en": "macro (very close)", "pl": "makro (bardzo blisko)" },
+    { "en": "ground level", "pl": "z poziomu ziemi" },
+    { "en": "through glass", "pl": "przez szkło" },
+    { "en": "from behind the character", "pl": "zza postaci" },
+    { "en": "from inside an object", "pl": "z wnętrza obiektu" }
   ],
   "motion_element": [
-    "something is falling",
-    "something is flowing",
-    "something is spinning",
-    "something is breaking apart",
-    "something is growing"
+    { "en": "something is falling", "pl": "coś spada" },
+    { "en": "something is flowing", "pl": "coś płynie" },
+    { "en": "something is spinning", "pl": "coś się obraca" },
+    { "en": "something is breaking apart", "pl": "coś się rozpada" },
+    { "en": "something is growing", "pl": "coś rośnie" }
   ],
   "weirdness_element": [
-    "gravity does not work",
-    "something is gigantic",
-    "something is miniature",
-    "something is alive",
-    "something is upside down"
+    { "en": "gravity does not work", "pl": "grawitacja nie działa" },
+    { "en": "something is gigantic", "pl": "coś jest gigantyczne" },
+    { "en": "something is miniature", "pl": "coś jest miniaturowe" },
+    { "en": "something is alive", "pl": "coś jest żywe" },
+    { "en": "something is upside down", "pl": "coś jest do góry nogami" }
   ],
   "symbol_or_motif": [
-    "mirrors",
-    "doors",
-    "water",
-    "plants",
-    "fire",
-    "clocks"
+    { "en": "mirrors", "pl": "lustra" },
+    { "en": "doors", "pl": "drzwi" },
+    { "en": "water", "pl": "woda" },
+    { "en": "plants", "pl": "rośliny" },
+    { "en": "fire", "pl": "ogień" },
+    { "en": "clocks", "pl": "zegary" }
   ],
   "creative_constraint": [
-    "only 2 colors",
-    "only lines",
-    "only geometric shapes",
-    "no black",
-    "max 15 minutes of work"
+    { "en": "only 2 colors", "pl": "tylko 2 kolory" },
+    { "en": "only lines", "pl": "tylko linie" },
+    { "en": "only geometric shapes", "pl": "tylko kształty geometryczne" },
+    { "en": "no black", "pl": "bez czerni" },
+    { "en": "max 15 minutes of work", "pl": "maks. 15 minut pracy" }
   ]
 }
