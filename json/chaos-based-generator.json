@@ -1,30 +1,30 @@
 {
   "object": [
-    "house",
-    "animal",
-    "machine",
-    "city",
-    "tree"
+    { "en": "house", "pl": "dom" },
+    { "en": "animal", "pl": "zwierzę" },
+    { "en": "machine", "pl": "maszyna" },
+    { "en": "city", "pl": "miasto" },
+    { "en": "tree", "pl": "drzewo" }
   ],
   "mutation": [
-    "giant",
-    "transparent",
-    "mechanical",
-    "made of plants",
-    "made of ice"
+    { "en": "giant", "pl": "gigantyczny" },
+    { "en": "transparent", "pl": "przezroczysty" },
+    { "en": "mechanical", "pl": "mechaniczny" },
+    { "en": "made of plants", "pl": "zrobiony z roślin" },
+    { "en": "made of ice", "pl": "zrobiony z lodu" }
   ],
   "action": [
-    "grows",
-    "falls apart",
-    "flows",
-    "explodes",
-    "spins"
+    { "en": "grows", "pl": "rośnie" },
+    { "en": "falls apart", "pl": "rozpada się" },
+    { "en": "flows", "pl": "płynie" },
+    { "en": "explodes", "pl": "eksploduje" },
+    { "en": "spins", "pl": "obraca się" }
   ],
   "environment": [
-    "in space",
-    "underwater",
-    "in the desert",
-    "in the clouds",
-    "in ruins"
+    { "en": "in space", "pl": "w kosmosie" },
+    { "en": "underwater", "pl": "pod wodą" },
+    { "en": "in the desert", "pl": "na pustyni" },
+    { "en": "in the clouds", "pl": "w chmurach" },
+    { "en": "in ruins", "pl": "w ruinach" }
   ]
 }
