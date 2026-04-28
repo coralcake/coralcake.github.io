@@ -1,25 +1,25 @@
 {
   "core_idea": [
-    "discovery",
-    "transformation",
-    "conflict",
-    "journey",
-    "mystery",
-    "loss"
+    { "en": "discovery", "pl": "odkrycie" },
+    { "en": "transformation", "pl": "transformacja" },
+    { "en": "conflict", "pl": "konflikt" },
+    { "en": "journey", "pl": "podróż" },
+    { "en": "mystery", "pl": "tajemnica" },
+    { "en": "loss", "pl": "strata" }
   ],
   "influencing_force": [
-    "nature",
-    "technology",
-    "chance",
-    "time",
-    "memory",
-    "dream"
+    { "en": "nature", "pl": "natura" },
+    { "en": "technology", "pl": "technologia" },
+    { "en": "chance", "pl": "przypadek" },
+    { "en": "time", "pl": "czas" },
+    { "en": "memory", "pl": "pamięć" },
+    { "en": "dream", "pl": "sen" }
   ],
   "twist": [
-    "something turns out to be an illusion",
-    "the protagonist changes",
-    "the world is not real",
-    "a new threat appears",
-    "something returns from the past"
+    { "en": "something turns out to be an illusion", "pl": "coś okazuje się iluzją" },
+    { "en": "the protagonist changes", "pl": "bohater się zmienia" },
+    { "en": "the world is not real", "pl": "świat nie jest prawdziwy" },
+    { "en": "a new threat appears", "pl": "pojawia się nowe zagrożenie" },
+    { "en": "something returns from the past", "pl": "coś powraca z przeszłości" }
   ]
 }
