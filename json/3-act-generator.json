@@ -1,23 +1,23 @@
 {
   "act_1_start": [
-    "someone finds a strange object",
-    "a stranger appears",
-    "something stops working",
-    "the protagonist receives a message",
-    "something disappears"
+    { "en": "someone finds a strange object", "pl": "ktoś znajduje dziwny przedmiot" },
+    { "en": "a stranger appears", "pl": "pojawia się nieznajomy" },
+    { "en": "something stops working", "pl": "coś przestaje działać" },
+    { "en": "the protagonist receives a message", "pl": "bohater otrzymuje wiadomość" },
+    { "en": "something disappears", "pl": "coś znika" }
   ],
   "act_2_complication": [
-    "someone reveals a secret",
-    "a rival appears",
-    "the protagonist discovers the truth",
-    "the situation gets worse",
-    "the protagonist makes a mistake"
+    { "en": "someone reveals a secret", "pl": "ktoś ujawnia sekret" },
+    { "en": "a rival appears", "pl": "pojawia się rywal" },
+    { "en": "the protagonist discovers the truth", "pl": "bohater odkrywa prawdę" },
+    { "en": "the situation gets worse", "pl": "sytuacja się pogarsza" },
+    { "en": "the protagonist makes a mistake", "pl": "bohater popełnia błąd" }
   ],
   "act_3_finale": [
-    "sacrifice",
-    "unexpected victory",
-    "escape",
-    "acceptance of fate",
-    "return to the beginning"
+    { "en": "sacrifice", "pl": "poświęcenie" },
+    { "en": "unexpected victory", "pl": "nieoczekiwane zwycięstwo" },
+    { "en": "escape", "pl": "ucieczka" },
+    { "en": "acceptance of fate", "pl": "akceptacja losu" },
+    { "en": "return to the beginning", "pl": "powrót do początku" }
   ]
 }
