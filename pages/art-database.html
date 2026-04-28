@@ -9,7 +9,7 @@
     <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" >
     <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
 </head>
-<body>
+<body data-lang-files="common,art-database">
     <script>
         (function(){
             if (localStorage.getItem('darkMode') === 'enabled') {
@@ -63,42 +63,42 @@
                             <img id="xmarkIcon" src="/svg/xmark-day.svg" alt="Close Menu" height=20 width=20>
                         </div>
                     </div>
-                    <div class="nav-title">Follow me</div>
+                    <div class="nav-title" data-i18n="menu_follow">Follow me</div>
                     <a href="https://github.com/coralcake" class="icon">
                         <img id="githubIcon" src="/svg/GitHub_Invertocat_Black.svg" alt="GitHub" height=20 width=20>
-                        <span>on GitHub: @coralcake</span>
+                        <span data-i18n="github_label">on GitHub: @coralcake</span>
                     </a>
                 </div>
                 <div class="nav-section">
-                    <div class="nav-title">Drawing idea generators</div>
-                    <a href="/pages/generators.html#generator-8">8-category generator</a>
-                    <a href="/pages/generators.html#generator-10">10-category generator</a>
-                    <a href="/pages/generators.html#generator-chaos">Chaos-based generator</a>
-                    <a href="/pages/generators.html#generator-3-act">3-act generator</a>
-                    <a href="/pages/generators.html#generator-archetype">Archetype generator</a>
-                    <a href="/pages/generators.html#generator-textures">Texture generator</a>
+                    <div class="nav-title" data-i18n="menu_generators">Drawing idea generators</div>
+                    <a href="/pages/generators.html#generator-8" data-i18n="menu_gen8">8-category generator</a>
+                    <a href="/pages/generators.html#generator-10" data-i18n="menu_gen10">10-category generator</a>
+                    <a href="/pages/generators.html#generator-chaos" data-i18n="menu_chaos">Chaos-based generator</a>
+                    <a href="/pages/generators.html#generator-3-act" data-i18n="menu_3act">3-act generator</a>
+                    <a href="/pages/generators.html#generator-archetype" data-i18n="menu_arch">Archetype generator</a>
+                    <a href="/pages/generators.html#generator-textures" data-i18n="menu_tex">Texture generator</a>
                 </div>
                 <div class="nav-section">
-                    <div class="nav-title">Art database</div>
-                    <a href="#art-traditional">🛠️ Traditional artworks</a>
-                    <a href="#art-digital">🛠️ Digital artworks</a>
+                    <div class="nav-title" data-i18n="menu_database">Art database</div>
+                    <a href="#art-traditional" data-i18n="menu_arttra">🛠️ Traditional artworks</a>
+                    <a href="#art-digital" data-i18n="menu_artdig">🛠️ Digital artworks</a>
                 </div>
             </div>
         </nav>
         
         <section id="art-base">
-            <h1>Art database</h1>
+            <h1 data-i18n="title">Art database</h1>
             
             <div id="art-traditional">
-                <h2>Traditional artworks</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2 data-i18n="arttra_title">Traditional artworks</h2>
+                <p data-i18n="arttra_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
             
             <hr class="section-separator"/>
             
             <div id="art-digital">
-                <h2>Digital artworks</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h2 data-i18n="artdig_title">Digital artworks</h2>
+                <p data-i18n="artdig_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
         </section>
     </main>
@@ -106,11 +106,11 @@
     <div id="overlay" onclick="hideMenu()"></div>
     
     <footer>
-        <span class="footer-text">© 2026 coralcake</span>
+        <span class="footer-text" data-i18n="footer">© 2026 coralcake</span>
     </footer>
     
     <script src="/js/menu-mobile.js"></script>
     <script src="/js/dark-light-mode.js"></script>
-    <script src="/js/darkening-image.js"></script>
+    <script src="/js/lang-switch.js"></script>
 </body>
 </html>
