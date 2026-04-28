@@ -1,5 +1,12 @@
 // =========================
-// CONFIG: źródła danych
+// LANGUAGE
+// =========================
+function getCurrentLang() {
+    return localStorage.getItem('lang') || 'en';
+}
+
+// =========================
+// CONFIG
 // =========================
 const topicSources = {
     "tab-gen-8": "/json/8-category-generator.json",
@@ -10,201 +17,134 @@ const topicSources = {
     "tab-gen-tex": "/json/textures-generator.json"
 };
 
-// =========================
-// CONFIG: mapowanie pól
-// =========================
 const generators = {
-    "tab-gen-8": {
-        "Theme / Object": "theme_or_object",
-        "Location": "location",
-        "Emotion": "emotion",
-        "Style": "style",
-        "Color palette": "color_palette",
-        "Perspective": "perspective",
-        "Weirdness element": "weirdness_element",
-        "Creative constraint": "creative_constraint"
-    },
-
-    "tab-gen-10": {
-        "Theme / Object": "theme_or_object",
-        "Location": "location",
-        "Era / Mood": "era_or_mood",
-        "Emotion": "emotion",
-        "Color palette": "color_palette",
-        "Perspective": "perspective",
-        "Motion element": "motion_element",
-        "Weirdness element": "weirdness_element",
-        "Symbol / Motif": "symbol_or_motif",
-        "Creative constraint": "creative_constraint"
-    },
-    
-    "tab-gen-chaos": {
-        "Object": "object",
-        "Mutation": "mutation",
-        "Action": "action",
-        "Environment": "environment"
-    },
-    
-    "tab-gen-3-act": {
-        "Act 1: Start": "act_1_start",
-        "Act 2: Complication": "act_2_complication",
-        "Act 3: Finale": "act_3_finale"
-    },
-    
-    "tab-gen-arch": {
-        "Core idea": "core_idea",
-        "Influencing force": "influencing_force",
-        "Twist": "twist"
-    },
-
-    "tab-gen-tex": {
-        "Characters": "characters",
-        "Objects / Accessories": "accessories",
-        "Architecture": "architecture",
-        "Technology": "technology",
-        "Nature": "nature",
-        "Atmospheric / Weather": "atmospheric",
-        "Animal": "animal",
-        "Abstract / Miscellaneous": "miscellaneous"
-    }
+    "tab-gen-8": [
+        "theme_or_object","location","emotion","style",
+        "color_palette","perspective","weirdness_element","creative_constraint"
+    ],
+    "tab-gen-10": [
+        "theme_or_object","location","era_or_mood","emotion",
+        "color_palette","perspective","motion_element",
+        "weirdness_element","symbol_or_motif","creative_constraint"
+    ],
+    "tab-gen-chaos": ["object","mutation","action","environment"],
+    "tab-gen-3-act": ["act_1_start","act_2_complication","act_3_finale"],
+    "tab-gen-arch": ["core_idea","influencing_force","twist"],
+    "tab-gen-tex": [
+        "characters","accessories","architecture","technology",
+        "nature","atmospheric","animal","miscellaneous"
+    ]
 };
 
 // =========================
-// FETCH JSON
+// CACHE
+// =========================
+let cachedTopics = {};
+let lastGenerated = {};
+
+// =========================
+// FETCH
 // =========================
 async function loadTopics(type) {
-    const path = topicSources[type];
+    if (cachedTopics[type]) return cachedTopics[type];
 
-    if (!path) {
-        console.error("❌ Nieznany typ:", type);
-        return null;
-    }
+    const res = await fetch(topicSources[type]);
+    const json = await res.json();
 
-    try {
-        const response = await fetch(path);
-        return await response.json();
-    } catch (e) {
-        console.error("❌ Błąd ładowania JSON:", e);
-        return null;
-    }
+    cachedTopics[type] = json;
+    return json;
 }
 
 // =========================
-// RANDOM SAFE
-// =========================
-function getRandomItem(array) {
-    if (!Array.isArray(array) || array.length === 0) {
-        return "⚠ Brak danych";
-    }
-    return array[Math.floor(Math.random() * array.length)];
-}
-
-// =========================
-// FLATTEN (obsługa zagnieżdżeń)
+// UTILS
 // =========================
 function flattenValues(value) {
     if (!value) return [];
-
     if (Array.isArray(value)) return value;
-
     if (typeof value === "object") {
-        return Object.values(value).flatMap(v => flattenValues(v));
+        return Object.values(value).flatMap(flattenValues);
     }
-
     return [];
 }
 
-// =========================
-// FORMAT
-// =========================
-function capitalize(str) {
-    return str.charAt(0).toUpperCase() + str.slice(1);
+function getValue(item) {
+    const lang = getCurrentLang();
+
+    if (typeof item === "object") {
+        return item[lang] || item.en;
+    }
+    return item;
 }
 
 // =========================
-// GENERATOR
+// GENERATE
 // =========================
-async function generateRandomTopic(type, targetTableId) {
+async function generateRandomTopic(type, tableId) {
     const topics = await loadTopics(type);
-    if (!topics) return;
+    const keys = generators[type];
 
-    const config = generators[type];
-    if (!config) {
-        console.error("❌ Brak configu:", type);
-        return;
-    }
+    const picks = {};
 
-    const result = {};
+    keys.forEach(key => {
+        const arr = flattenValues(topics[key]);
+        picks[key] = Math.floor(Math.random() * arr.length);
+    });
 
-    for (const [label, key] of Object.entries(config)) {
-        const raw = topics[key];
+    lastGenerated[tableId] = { type, picks };
 
-        if (!raw) {
-            console.warn(`⚠ Brak klucza w JSON: ${key}`);
-            result[label] = "⚠ Missing";
-            continue;
-        }
-
-        const flattened = flattenValues(raw);
-        result[label] = getRandomItem(flattened);
-    }
-    
-    // Pokazuje tabelę przed renderowaniem
-    const table = document.getElementById(targetTableId);
-    if (table) {
-        table.style.display = "table"; // Zmieniamy na table, aby była widoczna
-    }
-    
-    renderTable(result, targetTableId);
+    renderTable(tableId);
 }
 
 // =========================
-// RENDER DO KONKRETNEJ TABELI
+// RENDER
 // =========================
-function renderTable(data, tableId) {
+function renderTable(tableId) {
+    const entry = lastGenerated[tableId];
+    if (!entry) return;
+
+    const { type, picks } = entry;
+    const topics = cachedTopics[type];
+    const keys = generators[type];
+    const lang = getCurrentLang();
+
     const table = document.getElementById(tableId);
-
-    if (!table) {
-        console.error("❌ Nie znaleziono tabeli:", tableId);
-        return;
-    }
-
     const tbody = table.querySelector('tbody');
 
-    if (!tbody) {
-        console.error("❌ Tabela nie ma <tbody>:", tableId);
-        return;
-    }
-
+    table.style.display = "table";
     tbody.innerHTML = '';
 
-    for (const [key, value] of Object.entries(data)) {
-        const row = document.createElement('tr');
+    keys.forEach(key => {
+        const arr = flattenValues(topics[key]);
+        const value = getValue(arr[picks[key]]);
+        /*const label = translations[lang][key] || key;*/
+        const label = window.i18n[key] || key;
 
+        const row = document.createElement('tr');
         row.innerHTML = `
-            <td><strong>${capitalize(key)}</strong></td>
+            <td><strong>${label}</strong></td>
             <td>${value}</td>
         `;
-
         tbody.appendChild(row);
-    }
+    });
+}
+
+// =========================
+// RE-RENDER ALL
+// =========================
+function rerenderAllTables() {
+    Object.keys(lastGenerated).forEach(renderTable);
 }
 
 // =========================
 // EVENTS
 // =========================
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('.generateButton').forEach(button => {
-        button.addEventListener('click', () => {
-            const type = button.dataset.type;
-            const target = button.dataset.target;
-
-            if (!type || !target) {
-                console.error("❌ Brakuje data-type lub data-target");
-                return;
-            }
-
-            generateRandomTopic(type, target);
+    document.querySelectorAll('.generateButton').forEach(btn => {
+        btn.addEventListener('click', () => {
+            generateRandomTopic(btn.dataset.type, btn.dataset.target);
         });
     });
+});
+document.addEventListener('languageChanged', () => {
+    rerenderAllTables();
 });
