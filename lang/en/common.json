@@ -1,0 +1,16 @@
+{
+  "menu_follow": "Follow me",
+  "github_label": "on GitHub: @coralcake",
+  "menu_generators": "Drawing idea generators",
+  "menu_gen8": "8-category generator",
+  "menu_gen10": "10-category generator",
+  "menu_chaos": "Chaos-based generator",
+  "menu_3act": "3-act generator",
+  "menu_arch": "Archetype generator",
+  "menu_tex": "Texture generator",
+  "menu_database": "Art database",
+  "menu_arttra": "🛠️ Traditional artworks",
+  "menu_artdig": "🛠️ Digital artworks",
+  "back_top": "⬆ Back to top",
+  "footer": "© 2026 coralcake"
+}
